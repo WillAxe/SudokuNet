@@ -4,7 +4,7 @@
   import { defineEmits } from "vue"
   import { defineExpose } from "vue"
 
-  const seconds = ref(0)
+  const seconds = ref<number>(0)
   let intervalId: number
 
   const emit = defineEmits(["stopped-timer"])
@@ -36,7 +36,7 @@
 </script>
 
 <template>
-  <p>{{ formatTime() }}</p>
+  <p data-cy="timer-string">{{ formatTime() }}</p>
 </template>
 
 <style scoped>

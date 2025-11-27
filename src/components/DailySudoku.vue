@@ -4,7 +4,9 @@
 </script>
 
 <template>
-  <h1>Daily Challange: {{ new Date().toDateString() }}</h1>
+  <h1 data-cy="date-string">
+    Daily Challange: {{ new Date().toDateString() }}
+  </h1>
   <SudokuBoard />
 </template>
 

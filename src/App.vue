@@ -17,13 +17,17 @@
   <nav>
     <ul>
       <li>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink data-cy="home" to="/">Home</RouterLink>
       </li>
       <li>
-        <RouterLink to="/sudokuboard">Play sudoku</RouterLink>
+        <RouterLink data-cy="play-sudoku" to="/play-sudoku"
+          >Play sudoku</RouterLink
+        >
       </li>
       <li>
-        <RouterLink to="/dailysudoku">Daily Challange</RouterLink>
+        <RouterLink data-cy="daily-challange" to="/daily-challange"
+          >Daily Challange</RouterLink
+        >
       </li>
     </ul>
   </nav>
