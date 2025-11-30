@@ -183,10 +183,11 @@
     <!--Clicking outside to remove the highlight -->
     <h3>Difficulty: {{ difficulty }}</h3>
     <TimerClock ref="timerRef" />
-    <table border="1px" @click.stop>
+    <table data-cy="sudoku-table" border="1px" @click.stop>
       <tbody>
         <tr v-for="(row, rowCell) in board" :key="rowCell">
           <td
+            data-cy="sudoku-td-cell"
             v-for="(cell, colCell) in (row as (string | number)[])"
             :key="colCell"
             align="center"
@@ -218,6 +219,7 @@
   </div>
 
   <Buttons
+    data-cy="number-btn"
     @write-number="printNumber"
     @highlight-number="highlightCells"
     :numberCount="numberCount"

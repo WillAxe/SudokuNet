@@ -1,4 +1,15 @@
+//Tests the timerclock component to verify that the timer works as expected
+import { mount } from "@cypress/vue"
 import TimerClock from "../../src/components/TimerClock.vue"
+
+// Extend Cypress' Chainable interface to include 'mount'
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      mount: typeof mount
+    }
+  }
+}
 
 describe("TimerClock.vue", () => {
   it("mounts TimerClock and verifies that it shows a timer that works as expected", () => {

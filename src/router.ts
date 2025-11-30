@@ -8,15 +8,15 @@ export default createRouter({
   routes: [
     {
       component: HomeView,
-      path: "/",
+      path: "/"
     },
     {
       component: SudokuBoard,
-      path: "/sudokuboard",
+      path: "/play-sudoku"
     },
     {
       component: DailySudoku,
-      path: "/dailysudoku",
-    },
-  ],
+      path: "/daily-challange"
+    }
+  ]
 })

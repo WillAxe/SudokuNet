@@ -30,6 +30,7 @@
 <template>
   <div>
     <button
+      data-cy="number-buttons"
       v-for="n in 9"
       :key="n"
       @mouseover="highlightNumber(n)"
@@ -38,7 +39,9 @@
       :disabled="props.numberCount[n]! >= 9"
     >
       {{ n }}
-      <span class="number_counts">{{ 9 - (props.numberCount[n] || 0) }}</span>
+      <span data-cy="number-counter" class="number_counts">{{
+        9 - (props.numberCount[n] || 0)
+      }}</span>
       <span class="number_counts">{{ 9 - (numberCount[n] || 0) }}</span>
     </button>
   </div>

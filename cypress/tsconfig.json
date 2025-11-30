@@ -4,7 +4,13 @@
     "target": "esnext",
     "lib": ["ESNext", "dom"],
     "sourceMap": true,
-    "types": ["cypress", "node"]
+    "moduleResolution": "bundler",
+    "types": [
+      "cypress",
+      "node",
+      "@badeball/cypress-cucumber-preprocessor",
+      "@cypress/vue"
+    ]
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }

@@ -1,3 +1,4 @@
+//Testing the component DailySudoku alone to make sure it displays the current date correctly
 import DailySudoku from "../../src/components/DailySudoku.vue"
 
 describe("DailySudoku.vue", () => {
